@@ -1,0 +1,36 @@
+.editor-component {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px dashed red;
+}
+.editor-component:first-child{
+    margin-top: 30px;
+}
+.editor-component:before{
+    display: inline-block;
+    position: absolute;
+    top:-24px;
+    left: -1px;
+    font-size:12px;
+    text-indent: 0;
+    color: #ccc;
+    border: 1px solid #ccc;
+    content: attr(type);
+    clear: both;
+
+}
+
+.editor-component:after{
+    display: block;
+    content: '\0020';
+    clear: both;
+}
+
+p{
+    display: block;
+    font-size: 13px;
+}
+
+img{
+    width: 100% !important;
+}

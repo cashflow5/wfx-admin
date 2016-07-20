@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content">
+                <div class="search-content-wrap">
+                    <ul class="c-h-ul search-ul query-ul">
+                        <li>
+                            <label class="c-h-ul-li-title">退款单号：</label>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">订单号：</label>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">订单来源：</label>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">订单状态：</label>
+                            <select class="form-control input-small">
+                                <option>请选择</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">售中/售后：</label>
+                            <select class="form-control input-small">
+                                <option>请选择</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">退款类型：</label>
+                            <select class="form-control input-small">
+                                <option>请选择</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">退款状态：</label>
+                            <select class="form-control input-small">
+                                <option>请选择</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">退款单号：</label>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title">发货供货商：</label>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li class="w480">
+                            <label class="c-h-ul-li-title">申请时间：</label>
+                            <input type="text" class="form-control input-small"/>
+                            <span class="time-text">至</span>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li class="w480">
+                            <label class="c-h-ul-li-title">退款时间：</label>
+                            <input type="text" class="form-control input-small"/>
+                            <span class="time-text">至</span>
+                            <input type="text" class="form-control input-small"/>
+                        </li>
+                        <li>
+                            <label class="c-h-ul-li-title"></label>
+                            <a href="javascript:void(0);" class="btn btn-sm">查询</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blank20"></div>
+                <table class="table-basic table-padding">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>商品信息</th>
+                        <th>买家账号</th>
+                        <th>退款类型</th>
+                        <th>退款状态</th>
+                        <th>退款金额</th>
+                        <th>退款原因</th>
+                        <th>申请时间</th>
+                        <th>退款时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                </table>
+                <div class="blank10"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="10" class="align-left">
+                            <span class="light-grey">(售中)退款单号：985648952558</span>
+                            <span class="light-grey ml50">订单号：1282812064254594</span>
+                            <span class="light-grey ml50">订单来源：下单店铺名称</span>
+                            <span class="light-grey ml50">商品编码：98564895255</span>
+                        </th> 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">belle/百丽2016春季新款牛皮浅口.....</a>
+                                    </div>
+                                    <div><span class="light-grey">颜色分类：红色</span>  <span class="light-grey ml20">尺码：34</span></div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>13576876543</td>
+                        <td>仅退款</td>
+                        <td>退款申请中</td>
+                        <td class="align-center">
+                            ￥350.00
+                            <p class="light-grey">（交易￥350.00）</p>
+                        </td>
+                        <td>不想要了</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>
+                           <a class="Qing" href="details-afterSale-manage.shtml">查看</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank10"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="10" class="align-left">
+                            <span class="light-grey">(售中)退款单号：985648952558</span>
+                            <span class="light-grey ml50">订单号：1282812064254594</span>
+                            <span class="light-grey ml50">订单来源：下单店铺名称</span>
+                            <span class="light-grey ml50">商品编码：98564895255</span>
+                        </th> 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">belle/百丽2016春季新款牛皮浅口.....</a>
+                                    </div>
+                                    <div><span class="light-grey">颜色分类：红色</span>  <span class="light-grey ml20">尺码：34</span></div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>13576876543</td>
+                        <td>仅退款</td>
+                        <td>退款申请中</td>
+                        <td class="align-center">
+                            ￥350.00
+                            <p class="light-grey">（交易￥350.00）</p>
+                        </td>
+                        <td>不想要了</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>
+                           <a class="Qing" href="details-afterSale-manage.shtml">查看</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank10"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="10" class="align-left">
+                            <span class="light-grey">(售中)退款单号：985648952558</span>
+                            <span class="light-grey ml50">订单号：1282812064254594</span>
+                            <span class="light-grey ml50">订单来源：下单店铺名称</span>
+                            <span class="light-grey ml50">商品编码：98564895255</span>
+                        </th> 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">belle/百丽2016春季新款牛皮浅口.....</a>
+                                    </div>
+                                    <div><span class="light-grey">颜色分类：红色</span>  <span class="light-grey ml20">尺码：34</span></div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>13576876543</td>
+                        <td>仅退款</td>
+                        <td>退款申请中</td>
+                        <td class="align-center">
+                            ￥350.00
+                            <p class="light-grey">（交易￥350.00）</p>
+                        </td>
+                        <td>不想要了</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>
+                           <a class="Qing" href="details-afterSale-manage.shtml">查看</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank10"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="10" class="align-left">
+                            <span class="light-grey">(售中)退款单号：985648952558</span>
+                            <span class="light-grey ml50">订单号：1282812064254594</span>
+                            <span class="light-grey ml50">订单来源：下单店铺名称</span>
+                            <span class="light-grey ml50">商品编码：98564895255</span>
+                        </th> 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">belle/百丽2016春季新款牛皮浅口.....</a>
+                                    </div>
+                                    <div><span class="light-grey">颜色分类：红色</span>  <span class="light-grey ml20">尺码：34</span></div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>13576876543</td>
+                        <td>仅退款</td>
+                        <td>退款申请中</td>
+                        <td class="align-center">
+                            ￥350.00
+                            <p class="light-grey">（交易￥350.00）</p>
+                        </td>
+                        <td>不想要了</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>
+                           <a class="Qing" href="details-afterSale-manage.shtml">查看</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank10"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="300"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="150"/>
+                        <col width="80"/>
+                        <col width="100"/>
+                        <col width="100"/>
+                        <col width="60"/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="10" class="align-left">
+                            <span class="light-grey">(售中)退款单号：985648952558</span>
+                            <span class="light-grey ml50">订单号：1282812064254594</span>
+                            <span class="light-grey ml50">订单来源：下单店铺名称</span>
+                            <span class="light-grey ml50">商品编码：98564895255</span>
+                        </th> 
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">belle/百丽2016春季新款牛皮浅口.....</a>
+                                    </div>
+                                    <div><span class="light-grey">颜色分类：红色</span>  <span class="light-grey ml20">尺码：34</span></div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td>13576876543</td>
+                        <td>仅退款</td>
+                        <td>退款申请中</td>
+                        <td class="align-center">
+                            ￥350.00
+                            <p class="light-grey">（交易￥350.00）</p>
+                        </td>
+                        <td>不想要了</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>2016-03-25 09:38:10</td>
+                        <td>
+                           <a class="Qing" href="details-afterSale-manage.shtml">查看</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="blank20"></div>
+                <div class="row plr10">                                  
+                    <div class="fl">
+                        <div class="dataTables_info" id="sample_1_info">共计100条
+                            <label>每页
+                                <select size="1" name="sample_1_length" aria-controls="sample_1" class="form-control inline-inline input-xsmall">
+                                    <option value="5" selected="selected">5</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="-1">All</option>
+                                </select> 条</label>
+                        </div>
+                    </div>
+                    <div class="fr">
+                        <div class="dataTables_paginate paging_bootstrap fr">
+                            <ul class="pagination inline-inline " style="visibility: visible;">
+                                <li class="prev disabled"><a href="#" title="Previous"><i class="fa fa-angle-left"></i></a>
+                                </li>
+                                <li class="active"><a href="#">1</a>
+                                </li>
+                                <li><a href="#">2</a>
+                                </li>
+                                <li><a href="#">3</a>
+                                </li>
+                                <li><a href="#">4</a>
+                                </li>
+                                <li><a href="#">5</a>
+                                </li>
+                                <li><a>...</a>
+                                </li>
+                                <li><a href="#">9</a>
+                                </li>
+                                <li><a href="#">10</a>
+                                </li>
+                                <li class="next"><a href="#" title="Next"><i class="fa fa-angle-right"></i></a>
+                                </li>
+                            </ul>
+                            <div class="form-inline inline ml20">
+                                <span class="ml5">跳转第</span>
+                                <input type="text" class="form-control input-xsmall mr5">页
+                                <button type="submit" class="form-control btn btn-white">确定</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+</body>
+</html>

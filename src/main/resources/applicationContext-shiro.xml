@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+    <!-- 远程调用 -->
+    <bean id="remoteService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="#{wfxProps['client.remote.service.url']}"/>
+        <property name="serviceInterface" value="com.yougou.permission.remote.RemoteServiceInterface"/>
+    </bean>
+    
+    <!-- 权限缓存管理 -->
+	<bean id="guavaManager" class="org.springframework.cache.guava.GuavaCacheManager">
+	    <property name="cacheSpecification" value="concurrencyLevel=4,expireAfterAccess=3600s,expireAfterWrite=3600s" />
+	    <property name="cacheNames">
+	        <list>
+	            <value>permissionObj</value>
+	        </list>
+	    </property>
+	</bean>
+
+    <!-- Realm实现 -->
+    <bean id="oAuth2Realm" class="com.yougou.permission.client.OAuth2Realm">
+       <property name="cachingEnabled" value="false"/>
+        <property name="remoteService" ref="remoteService"/>
+        <property name="clientId" value="#{wfxProps['client.clientId']}"/>
+        <property name="clientSecret" value="#{wfxProps['client.clientSecret']}"/>
+		<property name="accessTokenUrl" value="#{wfxProps['client.remote.accessTokenUrl']}"/>
+        <property name="userInfoUrl" value="#{wfxProps['client.remote.userInfoUrl']}"/>
+		<property name="redirectUrl" value="#{wfxProps['client.redirectUrl']}"/>
+		<property name="guavaManager" ref="guavaManager"></property>
+    </bean>
+
+    <!-- 安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="oAuth2Realm"/>
+    </bean>
+
+    <!-- 相当于调用SecurityUtils.setSecurityManager(securityManager) -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager"/>
+        <property name="arguments" ref="securityManager"/>
+    </bean>
+
+    <!-- OAuth2身份验证过滤器 -->
+    <bean id="oAuth2AuthenticationFilter" class="com.yougou.permission.client.OAuth2AuthenticationFilter">
+        <property name="authcCodeParam" value="code"/>
+        <property name="failureUrl" value="/oauth2Failure.jsp"/>
+    </bean>
+
+	<bean id="logout" class="org.apache.shiro.web.filter.authc.LogoutFilter">
+		 <property name="redirectUrl" value="#{wfxProps['client.remote.logoutUrl']}reurl=#{wfxProps['client.baseUrl']}#{wfxProps['client.successUrl']}"/>
+	</bean>
+
+	<!-- <bean id="sysUserFilter" class="com.yougou.permission.core.SysUserFilter">
+		<property name="remoteService" ref="remoteService"/>
+	</bean> -->
+	<bean id="sysUserFilter" class="com.yougou.wfx.framework.base.WFXSysUserFilter">
+		<property name="remoteService" ref="remoteService"/>
+	</bean>
+	
+    <!-- Shiro的Web过滤器 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="#{wfxProps['client.remote.loginUrl']}client_id=#{wfxProps['client.clientId']}&amp;response_type=code&amp;redirect_uri=#{wfxProps['client.redirectUrl']}"/>
+        <property name="successUrl" value="#{wfxProps['client.successUrl']}"/>
+        <property name="filters">
+            <util:map>
+                <entry key="oauth2Authc" value-ref="oAuth2AuthenticationFilter"/>
+                <entry key="sysUser" value-ref="sysUserFilter"/>
+            </util:map>
+        </property>
+        <property name="filterChainDefinitions">
+            <value>
+				/assets/** = anon
+				/static/** = anon
+				/job/** = anon
+				/oauth2Failure.jsp = anon
+                /oauth2-login = oauth2Authc
+                /logout = logout
+                /** = sysUser
+            </value>
+        </property>
+    </bean>
+
+    <!-- Shiro生命周期处理器-->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+</beans>

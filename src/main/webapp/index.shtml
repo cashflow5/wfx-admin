@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content" id="page-content">
+                <!-- Page Body -->
+                这是首页
+                <!-- /Page Body -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+</body>
+</html>

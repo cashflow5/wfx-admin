@@ -1,0 +1,101 @@
+<!-- <div class="footer">
+	<div class="footer-inner">
+		<div class="footer-content">
+			<span class="bigger-120">
+				优购科技有限公司版权所有 &copy; 2011-2014
+			</span>
+		</div>
+	</div>
+</div> -->
+
+	<!-- basic scripts -->
+	
+	<script type="text/javascript">
+		if('ontouchstart' in document.documentElement) document.write("<script src='/assets/ace/js/jquery.mobile.custom.js'>"+"<"+"/script>");
+	</script>
+	<#--<script src="/assets/ace/js/bootstrap.js"></script>-->
+	<script src="/assets/ace/js/bootstrap.min-3.3.5.js"></script>
+
+	<!-- page specific plugin scripts -->
+
+	<!--[if lte IE 8]>
+	  <script src="/assets/ace/js/excanvas.js"></script>
+	<![endif]-->
+	<script src="/assets/ace/js/jquery-ui.custom.js"></script>
+	<script src="/assets/ace/js/jquery.ui.touch-punch.js"></script>
+	<script src="/assets/ace/js/jquery.easypiechart.js"></script>
+	<script src="/assets/ace/js/jquery.sparkline.js"></script>
+	<script src="/assets/ace/js/flot/jquery.flot.js"></script>
+	<script src="/assets/ace/js/flot/jquery.flot.pie.js"></script>
+	<script src="/assets/ace/js/flot/jquery.flot.resize.js"></script>
+	
+	<!-- mmGrid js -->
+	<script src="/static/plugin/mmGrid/mmGrid.js"></script>
+    <script src="/static/plugin/mmGrid/mmPaginator.js"></script>
+    <script src="/static/plugin/mmGrid/mmSearchFormParams.js"></script>
+    
+    <!-- messenger -->
+    <script src="/static/plugin/messenger/js/messenger.min.js"></script>
+    <script src="/static/plugin/messenger/js/messenger-theme-future.js"></script>
+    <!-- calendar -->
+    <script src="/static/plugin/lhgcalendar/lhgcore.min.js"></script>
+    <script src="/static/plugin/lhgcalendar/lhgcalendar.min.js"></script>
+    <!-- validate js -->
+    <script src="/static/plugin/validate/jquery.validate.js"></script>
+
+	<!-- ace scripts -->
+	<script src="/assets/ace/js/ace/elements.scroller.js"></script>
+	<script src="/assets/ace/js/ace/elements.colorpicker.js"></script>
+	<script src="/assets/ace/js/ace/elements.fileinput.js"></script>
+	<script src="/assets/ace/js/ace/elements.typeahead.js"></script>
+	<script src="/assets/ace/js/ace/elements.wysiwyg.js"></script>
+	<script src="/assets/ace/js/ace/elements.spinner.js"></script>
+	<script src="/assets/ace/js/ace/elements.treeview.js"></script>
+	<script src="/assets/ace/js/ace/elements.wizard.js"></script>
+	<script src="/assets/ace/js/ace/elements.aside.js"></script>
+	<script src="/assets/ace/js/ace/ace.js"></script>
+	<script src="/assets/ace/js/ace/ace.ajax-content.js"></script>
+	<script src="/assets/ace/js/ace/ace.touch-drag.js"></script>
+	<script src="/assets/ace/js/ace/ace.sidebar.js"></script>
+	<script src="/assets/ace/js/ace/ace.sidebar-scroll-1.js"></script>
+	<script src="/assets/ace/js/ace/ace.submenu-hover.js"></script>
+	<script src="/assets/ace/js/ace/ace.widget-box.js"></script>
+	<script src="/assets/ace/js/ace/ace.settings.js"></script>
+	<script src="/assets/ace/js/ace/ace.settings-rtl.js"></script>
+	<script src="/assets/ace/js/ace/ace.settings-skin.js"></script>
+	<script src="/assets/ace/js/ace/ace.widget-on-reload.js"></script>
+	<script src="/assets/ace/js/ace/ace.searchbox-autocomplete.js"></script>
+
+	<!-- the following scripts are used in demo only for onpage help and you don't need them -->
+	<link rel="stylesheet" href="/assets/ace/css/ace.onpage-help.css" />
+
+	<script type="text/javascript"> ace.vars['base'] = '..'; </script>
+	<script src="/assets/ace/js/ace/elements.onpage-help.js"></script>
+	<script src="/assets/ace/js/ace/ace.onpage-help.js"></script>
+	
+	<#if isPjax?? && isPjax =="true">
+	<script src="/static/js/jquery.pjax.js"></script>
+	<script>
+	 $(function() {
+		$.pjax({
+        	selector: "a[data-value='menu']",
+        	container: '#page-content', //内容替换的容器
+        	show: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
+        	cache: true,  //是否使用缓存
+        	storage: false,  //是否使用本地存储
+        	titleSuffix: '-优购会员管理', //标题后缀
+        	filter: function(href){},
+        	callback: function(status){}	
+    	});
+    	
+    	$('#page-content').bind('pjax.start', function(){
+		    YouGou.UI.progressLoading();
+		}).bind('pjax.end', function(){
+		    YouGou.UI.progressStop();
+		});
+	});
+	</script>
+	</#if>
+	<#if footer??>
+		${footer}
+	</#if>

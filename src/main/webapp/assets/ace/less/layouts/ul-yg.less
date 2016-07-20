@@ -1,0 +1,113 @@
+.search-content-wrap,.search-btn-wrap{
+  border:1px solid @c_gray_1;
+  padding:15px 0 5px 0;
+}
+.c-h-ul {
+  list-style: none;
+  .clearfix();
+  &.query-ul{
+    margin: 0;
+    padding:0;
+    font-family: @font-family-sans-serif;
+  }
+  > li {
+    float: left;
+    margin-right: 10px;
+    //white-space:nowrap;
+    .c-h-ul-li-title {
+      width: 106px;
+      font-family: @font-family-songti;
+      //      margin-right: 10px;
+    }
+    .time-text{
+      display: inline-block;
+      width: 104px;
+      text-align: center;
+    }
+
+    .search-ul& {//css的样式解释为 .search-ul.c-h-ul li{}
+      width: 300px;
+      padding-bottom: 10px;
+      .query-ul&{//css的样式解释为 .query-ul.search-ul.c-h-ul li{}
+        width: 230px;
+        margin: 0;
+        padding-left:0;
+      }
+      &.w300{
+        width:300px;
+      }
+      &.w500{
+        width:500px;
+      }
+      &.w480 {
+        width: 460px;
+      }
+      &.w420{
+        width: 420px;
+      }
+      label {
+        font-size: @f12;
+        text-align: right;
+      }
+      .form-control {
+        font-size: @f12;
+        display: inline;
+        width: 180px;
+      }
+      .width-auto&{
+        width: auto;
+      }
+    }
+  }
+  &.info-ul{
+    .border-solid(all);
+    padding: 20px 25px;
+    .margin_normal();
+    li{
+      margin-right: 65px;
+    }
+  }
+
+  &.group-filter{
+    li{
+      margin: 0 10px 10px 0;
+      .group-filter-title-btn{
+        display: block;
+        padding: 4px 13px;
+        line-height: 1.5em;
+        .border-solid(all);
+        .tcenter();
+        font-size: @body_font_size;
+      }
+      .group-filter-content{
+        //        display: none;
+      }
+    }
+  }
+}
+.ul-img-list{
+  margin: 0;
+  padding: 0;
+  .clearfix();
+  > li{
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding:10px;
+    > .img-box{
+      width: 118px;
+      height: 118px;
+      overflow: hidden;
+      border: 1px solid @legend-border-color;
+      text-align: center;
+      > .img-size-text{
+        line-height: 25px;
+      }
+    }
+    > img{
+      width: 118px;
+      height: 118px;
+
+    }
+  }
+}

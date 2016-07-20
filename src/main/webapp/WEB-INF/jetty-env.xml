@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" 
+     "http://jetty.mortbay.org/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+
+	<New class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>java:comp/env/MySqlDS_WFX</Arg>
+		<Arg>
+			<New class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+				<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+				<!-- <Set name="url">jdbc:mysql://10.0.30.131:8066/user_db?useUnicode=true&amp;characterEncoding=utf-8
+				</Set> -->
+				<Set name="url">jdbc:mysql://10.0.30.201:3306/wfx_db?useUnicode=true&amp;characterEncoding=utf-8
+				</Set>
+				<Set name="username">belle</Set>
+				<Set name="password">belle@belle</Set>
+			</New>
+		</Arg>
+	</New>
+	<!-- 
+	<New class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>java:comp/env/MySqlDS_YiTian</Arg>
+		<Arg>
+			<New class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+				<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+				<Set name="url">jdbc:mysql://10.0.30.131:8066/yitian_b2c_db?useUnicode=true&amp;characterEncoding=utf-8
+				</Set>
+				<Set name="username">belle</Set>
+				<Set name="password">belle@belle</Set>
+			</New>
+		</Arg>
+	</New>
+	
+	<New class="org.eclipse.jetty.plus.jndi.Resource">
+		<Arg>java:comp/env/MySqlDS_Member_Monitor</Arg>
+		<Arg>
+			<New class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+				<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+				<Set name="url">jdbc:mysql://10.0.30.131:8066/data_process_db?useUnicode=true&amp;characterEncoding=utf-8
+				</Set>
+				<Set name="username">belle</Set>
+				<Set name="password">belle@belle</Set>
+			</New>
+		</Arg>
+	</New>
+	 -->
+</Configure>
+

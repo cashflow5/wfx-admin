@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!--<link type="text/css" rel="stylesheet" href="static/plugin/kindeditor/themes/default/default.css"/>-->
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content" id="page-content">
+                <!-- Page Body -->
+               <div class="article-box">
+                   <div class="mb10 editor-group">
+                       <!--<a href="javascript:;" class="btn btn-yougou btn-sm" data-type="text">添加文字</a>-->
+                       <!--<a href="javascript:;" class="btn btn-yougou btn-sm" data-type="image">添加图片</a>-->
+                       <!--<a href="javascript:;" class="btn btn-yougou btn-sm" data-type="video">添加视频</a>-->
+                       <a href="javascript:;" class="btn btn-yougou btn-sm" data-type="goods">添加商品</a>
+                       <a href="javascript:;" class="btn btn-yougou btn-sm" data-type="shop">添加店铺</a>
+                   </div>
+                   <textarea id="articleEditor" class="form-control input-xlarge" name="articleEditor" cols="80" rows="5"></textarea>
+                   <a href="javascript:;" class="btn btn-yougou btn-sm GetHtml">获取</a>
+               </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+<script src="static/plugin/layer/extend/layer.ext.js"></script>
+<script type="text/javascript" src="static/plugin/kindeditor/kindeditor.min.js"></script>
+<script type="text/javascript" src="static/js/manage/find/article-new.js"></script>
+</body>
+</html>

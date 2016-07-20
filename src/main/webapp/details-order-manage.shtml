@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="<main-container></main-container>">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content">
+                <!-- Page Body -->
+                <div class="row bg-gray pd10 bd">
+                    <div class="col-md-12">
+                        <span>订单号：242598798</span>
+                        <span class="ml20">买家账号：242598798</span>
+                        <span class="ml20">订单来源：测试店铺</span>
+                    </div>
+                </div>
+                <div class="blank20"></div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">下单时间：2016-09-09 13:23:22</div>
+                    <div class="col-md-3 col-xs-3">支付方式：微信支付</div>
+                    <div class="col-md-3 col-xs-3">支付时间：2016-09-09 13:23:22</div>
+                    <div class="col-md-3 col-xs-3">发货供货商：优购科技有限公司</div>
+                </div>
+                <div class="blank10"></div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">发货时间：2016-09-09 13:23:22</div>
+                    <div class="col-md-3 col-xs-3">订单状态：待发货</div>
+                    <div class="col-md-3 col-xs-3">物流公司：京东快递</div>
+                    <div class="col-md-3 col-xs-3">快递单号：123458</div>
+                </div>
+                <div class="blank10"></div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-3">分销商账号：19876543456</div>
+                    <div class="col-md-3 col-xs-3">上级分销商：16798765678</div>
+                </div>
+                <div class="blank20"></div>
+                <table class="table-ex tcenter table-padding" width="100%">
+                    <colgroup>
+                        <col width="400"/>
+                        <col width=""/>
+                        <col width=""/>
+                        <col width="150"/>
+                        <col width=""/>
+                        <col width=""/>
+                        <col width=""/>
+                        <col width=""/>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>商品信息</th> 
+                        <th>数量</th>
+                        <th>分销价</th>
+                        <th>单价</th>
+                        <th>一级佣金</th>
+                        <th>二级佣金</th>
+                        <th>优惠券</th>
+                        <th>运费</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="tleft">
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span class="Gray">（卡其色，95B）</span>
+                                    </div>
+                                    <div><span class="Gray">货品条码：</span>321231243  <span class="Gray ml20">归属商家：</span>SYPG</div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td class="align-center">1</td>
+                        <td class="align-center">233.00</td>
+                        <td class="align-center">233.00</td>
+                        <td class="align-center">20.00（10%）</td>
+                        <td class="align-center">10.00（10%）</td>
+                        <td class="align-center">20.00</td> 
+                        <td class="align-center">15.00</td>             
+                    </tr>
+                    <tr>
+                        <td class="tleft">
+                            <dl class="detailImg nomargin">
+                                <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                <dd>
+                                    <div>
+                                        <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span class="Gray">（卡其色，95B）</span>
+                                    </div>
+                                    <div><span class="Gray">货品条码：</span>321231243  <span class="Gray ml20">归属商家：</span>SYPG</div>
+                                </dd>
+                            </dl>
+                        </td>
+                        <td class="align-center">1</td>
+                        <td class="align-center">233.00</td>
+                        <td class="align-center">233.00</td>
+                        <td class="align-center">20.00（10%）</td>
+                        <td class="align-center">10.00（10%）</td>
+                        <td class="align-center">20.00</td> 
+                        <td class="align-center">15.00</td>             
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8">商品总金额：233.00 - 优惠券：233.00 + 运费：233.00 = 实付金额：<span class="red">444.00</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="blank20"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="border-bottom-dotted ptb10">
+                            <p><strong>配送地址</strong></p>
+                            <p>
+                                吴昊，13126658389，广东省 深圳市 南山区 祁家豁子8号健翔大厦5层512室，518000，只工作日送货（双休日，假日不送）
+                                <a class="Qing btn-copy" data-clipboard-text="吴昊，13126658389，广东省 深圳市 南山区 祁家豁子8号健翔大厦5层512室，518000，只工作日送货（双休日，假日不送）" href="javascript:void(0);">复制信息</a>
+                            </p>
+                        </div>
+                        <div class="blank20"></div>
+                        <div class="border-bottom-dotted ptb10">
+                            <p><strong>物流信息</strong></p>
+                            <div>
+                                <h5>包裹1</h5>
+                                <div class="ml20">
+                                    <span>物流公司：中通快递</span>
+                                    <span class="ml20">快递单号：123456895</span>
+                                    <span class="ml20">物流跟踪：
+                                        <a href="javascript:void(0);" class="orange trip10 nowrap">由【福建厦门中转部】发往【浙江杭州...】<i class="fa fa-angle-down"></i></a>
+                                    </span>
+                                    <div class="blank20"></div>
+                                     <table class="table-ex tcenter table-padding" style="width:40%">
+                                        <thead>
+                                            <tr>
+                                                <th>商品信息</th>
+                                                <th>数量</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-left">
+                                                    <dl class="detailImg nomargin">
+                                                        <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                                        <dd>
+                                                            <div>
+                                                                <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span class="Gray">（卡其色，95B）</span>
+                                                            </div>
+                                                            <div><span class="Gray">货品条码：</span>321231243  <span class="Gray ml20">归属商家：</span>SYPG</div>
+                                                        </dd>
+                                                    </dl>
+                                                </td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="blank20"></div>
+                            <div>
+                                <h5>包裹2</h5>
+                                <div class="ml20">
+                                    <span>物流公司：中通快递</span>
+                                    <span class="ml20">快递单号：123456895</span>
+                                    <span class="ml20">物流跟踪：
+                                        <a href="javascript:void(0);" class="orange trip10 nowrap">由【福建厦门中转部】发往【浙江杭州...】<i class="fa fa-angle-down"></i></a>
+                                    </span>
+                                    <div class="blank20"></div>
+                                     <table class="table-ex tcenter table-padding" style="width:40%">
+                                        <thead>
+                                            <tr>
+                                                <th>商品信息</th>
+                                                <th>数量</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="align-left">
+                                                    <dl class="detailImg nomargin">
+                                                        <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                                        <dd>
+                                                            <div>
+                                                                <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span class="Gray">（卡其色，95B）</span>
+                                                            </div>
+                                                            <div><span class="Gray">货品条码：</span>321231243  <span class="Gray ml20">归属商家：</span>SYPG</div>
+                                                        </dd>
+                                                    </dl>
+                                                </td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank20"></div>
+                        <a href="javascript:void(0);" class="btn btn-sm">返回</a>
+                    </div>
+                    
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+<script type="text/javascript" src="static/plugin/zclip/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="static/js/manage/order/details-order-manage.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content" id="page-content">
+                <!-- Page Body -->
+                <div class="row bg-gray pd10 bd">
+                    <div class="col-md-12">
+                        <span>订单号：242598798</span>
+                        <span class="ml20">买家账号：242598798</span>
+                        <span class="ml20">订单来源：测试店铺</span>
+                    </div>
+                </div>
+                <div class="blank20"></div>
+                <form method="post" action="#">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12"> 退款类型：
+                            <label><input type="radio" name="returnType" value="0"> 已发货仅退款 </label>
+                            <label><input type="radio" name="returnType" value="1"> 退货退款 </label></div>
+                    </div>
+                    <div class="f16 bolder ptb10">选择退款商品</div>
+                    <table class="table-ex tcenter table-padding" width="100%">
+                        <colgroup>
+                            <col width="30">
+                            <col>
+                            <col width="70">
+                            <col width="70">
+                            <col width="70">
+                            <col width="120">
+                            <col width="120">
+                            <col width="70">
+                            <col width="70">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th>商品信息</th>
+                            <th>数量</th>
+                            <th>分销价</th>
+                            <th>单价</th>
+                            <th>一级佣金</th>
+                            <th>二级佣金</th>
+                            <th>优惠券</th>
+                            <th>运费</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="radio" name="goodsselect" value="gd_00001" checked></td>
+                            <td class="tleft">
+                                <dl class="detailImg nomargin">
+                                    <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                    <dd>
+                                        <div>
+                                            <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span
+                                                class="Gray">（卡其色，95B）</span>
+                                        </div>
+                                        <div><span class="Gray">货品条码：</span>321231243 <span
+                                                class="Gray ml20">归属商家：</span>SYPG
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td class="align-center">1</td>
+                            <td class="align-center">233.00</td>
+                            <td class="align-center">233.00</td>
+                            <td class="align-center">20.00（10%）</td>
+                            <td class="align-center">10.00（10%）</td>
+                            <td class="align-center">20.00</td>
+                            <td class="align-center">15.00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="goodsselect" value="gd_00002"></td>
+                            <td class="tleft">
+                                <dl class="detailImg nomargin">
+                                    <dt><img class="border-gray" src="static/images/goods.png" alt=""></dt>
+                                    <dd>
+                                        <div>
+                                            <a href="#" class="Qing">帝梦诗dimens正品美体塑身衣收腹燃脂塑身内衣束身衣瘦身衣上衣5004卡其51 </a><span
+                                                class="Gray">（卡其色，95B）</span>
+                                        </div>
+                                        <div><span class="Gray">货品条码：</span>321231243 <span
+                                                class="Gray ml20">归属商家：</span>SYPG
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </td>
+                            <td class="align-center">1</td>
+                            <td class="align-center">233.00</td>
+                            <td class="align-center">233.00</td>
+                            <td class="align-center">20.00（10%）</td>
+                            <td class="align-center">10.00（10%）</td>
+                            <td class="align-center">20.00</td>
+                            <td class="align-center">15.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div id="returnForm" class="form-body info-pb10 ml20"></div>
+                </form>
+                <!-- /Page Body -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+
+    <script id="formtemplate" type="text/html">
+        <input name="id" type="hidden" value="{{d.id}}"/>
+        {{# if(d.returnType == 1) {}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em> 退货数量：</dt>
+            <dd>
+                <input type="text" name="returnNumber" class="form-control input-small">
+            </dd>
+        </dl>
+        {{# }}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em>退款原因：</dt>
+            <dd>
+                <select name="returnReason" class="form-control input-medium inline-block">
+                    <option value="">七天无理由</option>
+                    <option value="">不想要了</option>
+                    <option value="">质量问题</option>
+                </select>
+            </dd>
+        </dl>
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em>退款金额：</dt>
+            <dd>
+                <input type="text" name="returnMoney" class="form-control input-small">
+            </dd>
+        </dl>
+        {{# if(d.returnType == 1) {}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em>快递公司：</dt>
+            <dd>
+                <input type="text" name="express" class="form-control input-small">
+            </dd>
+        </dl>
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em>快递单号：</dt>
+            <dd>
+                <input type="text" name="expressNo" class="form-control input-small">
+            </dd>
+        </dl>
+        {{# }}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright"><em class="red">* </em>退货说明：</dt>
+            <dd>
+                <textarea class="form-control input-large" name="returnDesc" rows="5"></textarea>
+            </dd>
+        </dl>
+        {{# if(d.returnType == 1) {}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright">退货地址：</dt>
+            <dd>{{d.returnAddress}}</dd>
+        </dl>
+        {{# }}}
+        <dl class="c-h-dl dl-basic-field">
+            <dt class="tright">&nbsp;</dt>
+            <dd>
+                <button type="submit" class="btn btn-yougou btn-sm">申请</button>
+                <a href="javascript:void(0);" onclick="back();" class="btn btn-default btn-sm">返回</a>
+            </dd>
+        </dl>
+    </script>
+    <script type="text/javascript" src="static/plugin/layer/laytpl.js"></script>
+    <script type="text/javascript" src="static/js/manage/goods/list-aftersal-apply.js"></script>
+</div>
+<!-- /.main-container -->
+</body>
+</html>

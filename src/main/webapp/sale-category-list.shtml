@@ -1,0 +1,86 @@
+<div class="table-responsive">
+    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>子分类</th>
+            <th>图片</th>
+            <th>产品数</th>
+            <th>最后更新人</th>
+            <th>最后更新时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>配饰</td>
+            <td class="align-center">
+                <a href="javascript:void(0);" class="red upload-img">
+                    <img src="static/images/goods.png"/>
+                </a>
+            </td>
+            <td>23</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        <tr>
+            <td>运动</td>
+            <td class="align-center">
+                <a href="javascript:void(0);" class="red upload-img">请上传图片</a>
+            </td>
+            <td>23</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        <tr>
+            <td>配饰</td>
+            <td class="align-center">
+                <a href="javascript:void(0);" class="red upload-img">
+                    <img src="static/images/goods.png"/>
+                </a>
+            </td>
+            <td>23</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        <tr>
+            <td>运动</td>
+            <td class="align-center">
+                <a href="javascript:void(0);" class="red upload-img">请上传图片</a>
+            </td>
+            <td>23</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('.upload-img').click(function(){
+            layer.open({
+                title:"请上传图片",
+                type:1,
+                content:'<div class="mt10 pd10"><input id="path" type="file" style="display:none"/><a href="javascript:void(0);" class="btn btn-sm" onclick="path.click()">选择文件</a><span class="file-text ml10"></span></div>',
+                area:["250px","auto"],
+                btn:['确定',"取消"],
+                yes:function(index){
+                    layer.close(index);
+                },
+                cancel:function(){
+
+                },
+                success:function(){
+                    $('#path').change(function(){
+                        var val = $(this).val();
+                        $('.file-text').html(val);
+                    });
+                }
+            });
+        })
+    })
+</script>

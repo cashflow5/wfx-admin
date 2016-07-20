@@ -1,0 +1,67 @@
+.modal-header {
+    min-height: 16.43px;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.modal-footer {
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+.modal-header .close {
+    margin-top: -6px;
+}
+.bootstrap-dialog .bootstrap-dialog-title {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+}
+.bootstrap-dialog.type-primary .modal-header {
+    background-color: #3da8b9;
+}
+
+.btn-primary,
+.btn-primary:focus {
+  background-color: #3da8b9 !important;
+  border-color: #3da8b9;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.open .btn-primary.dropdown-toggle {
+  background-color: #66BECC !important;
+  border-color: #3da8b9;
+}
+.btn-primary.no-border:hover,
+.btn-primary.no-border:active {
+  border-color: #66BECC;
+}
+.btn-primary.no-hover:hover,
+.btn-primary.no-hover:active {
+  background-color: #3da8b9 !important;
+}
+.btn-primary.active {
+  background-color: #66BECC !important;
+  border-color: #66BECC;
+}
+.btn-primary.no-border.active {
+  background-color: #66BECC !important;
+  border-color: #66BECC;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #3da8b9 !important;
+  border-color: #3da8b9;
+}

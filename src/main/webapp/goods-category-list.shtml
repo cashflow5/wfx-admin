@@ -1,0 +1,39 @@
+<div class="table-responsive">
+    <table id="sample-table-1" class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>分类名称</th>
+            <th>分类等级</th>
+            <th>状态</th>
+            <th>类别编码</th>
+            <th>SKU数量</th>
+            <th>最后更新人</th>
+            <th>最后更新时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>配饰</td>
+            <td>一级分类</td>
+            <td>启用</td>
+            <td>kiuj</td>
+            <td>2112</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">停用</a></td>
+        </tr>
+        <tr>
+            <td>运动</td>
+            <td>二级分类</td>
+            <td>停用</td>
+            <td>kiuj</td>
+            <td>2112</td>
+            <td>yougou</td>
+            <td>2015-09-09 13:23:33</td>
+            <td><a href="javascript:;">启用</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

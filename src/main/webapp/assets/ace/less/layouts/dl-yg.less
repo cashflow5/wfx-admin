@@ -1,0 +1,132 @@
+
+.c-h-dl {
+  .margin_normal();
+  .padding_normal();
+  .clearfix();
+  dt {
+    font-weight: normal;
+    float: left;
+    width: 90px;
+    margin-right: -100%;
+    padding: 10px 0;
+    .edit-form &{
+      line-height: 29px;
+    }
+  }
+  dd {
+    float: left;
+    .border-solid(left);
+    margin-left: 100px;
+    padding: 10px 0;
+    .edit-form & *{
+      vertical-align: middle;
+    }
+  }
+  &.dl-basic {
+    dt {
+      text-align: right;
+      padding:5px 0;
+      width: 65px;
+    }
+    dd {
+      padding:5px 0;
+      .border_no();
+      margin-left: 68px;
+    }
+  }
+  &.dl-basic-105{
+    dt{
+      width: 105px;
+      text-align: right;
+      padding:7px 0;
+    }
+    dd{
+      margin-left:108px;
+      padding:7px 0;
+      .border_no();
+    }
+  }
+
+  &.dl-basic-field{
+    dt{
+      width: 100px;
+      text-align: right;
+    }
+    dd{
+      margin-left: 103px;
+      border-left: 0;
+    }
+  }
+}
+
+.c-h-dl-validator {
+  .margin_normal();
+  .padding_normal();
+  dt {
+    float: left;
+    font-weight: normal;
+    padding: 7px 0 0 10px;
+    color: @ace-brown;
+  }
+  dd {
+    float: left;
+    &.v-title {
+      padding-top: 7px;
+      label {
+        font-weight: normal;
+        width: 60px;
+        display: inline-block;
+        .tright();
+        .c-h-dl-label85 &{
+          width: 85px;
+        }
+        .c-h-dl-label100 &{
+          width: 100px;
+        }
+         .c-h-dl-label120 &{
+          width: 120px;
+        }
+        .c-h-dl-label130 &{
+          width: 130px;
+        }
+        .c-h-dl-label150 &{
+          width: 150px;
+        }
+        .c-h-dl-label185 &{
+          width: 185px;
+        }
+      }
+      em {
+        color:@ace-brown;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .info-pb10 & {
+    padding-bottom: 10px;
+  }
+  .info-ptb10 & {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &.form-radio {
+    .v-title {
+      padding-top: 2px;
+      label {
+        margin-right: 0;
+      }
+    }
+    label {
+      margin-bottom: 0;
+      margin-right: 25px;
+      .radio {
+        padding-top: 1px;
+      }
+    }
+    dt {
+      padding: 2px 0 0 0;
+    }
+  }
+}

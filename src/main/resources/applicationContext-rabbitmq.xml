@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit-1.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	default-lazy-init="false">
+	
+	<!-- 定义rabbitmq连接工厂，生产环境使用集群配置，支持failover -->
+	<rabbit:connection-factory id="wfxConnectionFactory" addresses="#{wfxProps['rabbitmq.host']}" channel-cache-size="30"/>
+	<rabbit:admin connection-factory="wfxConnectionFactory"/>
+	<bean id="jsonMessageConverter" class="org.springframework.amqp.support.converter.JsonMessageConverter">
+	    <property name="classMapper">
+	        <bean class="org.springframework.amqp.support.converter.DefaultClassMapper">
+	        </bean>
+	    </property>
+	</bean>
+	
+	<rabbit:template id="rabbitTemplate" connection-factory="wfxConnectionFactory" reply-timeout="50000"
+	message-converter="jsonMessageConverter" />
+	
+</beans>

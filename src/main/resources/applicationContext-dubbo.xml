@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+						   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	 					   http://code.alibabatech.com/schema/dubbo	
+	 					   http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="true">
+
+	<description>Dubbo配置</description>
+
+	<dubbo:application name="wfx-admin" owner="wu.y1,xiang.bh,yang.jj" />
+	<dubbo:consumer check="false" />
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry protocol="zookeeper" address="#{wfxProps['dubbo.registry.address']}" file="/root/.dubbo/dubbo-registry-wfx-admin.cache" />
+
+	<!-- 优雅停机 -->
+	<bean class="com.yougou.tools.common.utils.DubboDestruction" destroy-method="destroy" lazy-init="false" />
+	
+	<!-- ==============商品Api============== -->
+	<dubbo:reference id="commodityBaseApiService" interface="com.yougou.pc.api.ICommodityBaseApiService"
+		timeout="10000" version="1.2" protocol="dubbo" />
+	<!-- 财务支付退款 API -->
+	<dubbo:reference id="payForFinanceApi" interface="com.yougou.pay.api.IPayForFinanceApi" version="1.0" check="false" timeout="60000" protocol="dubbo" />
+		
+</beans>

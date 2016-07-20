@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+						   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	 					   http://code.alibabatech.com/schema/dubbo	
+	 					   http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="true">
+
+	<description>WFX Dubbo配置</description>
+	
+	<!-- 系统级别api -->
+	<dubbo:reference id="wfxSystemApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.system.api.IWFXSystemApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 文件上传api -->
+	<dubbo:reference id="fileUploadApi" url="hessian://127.0.0.1:8090/dubbo/com.yougou.wfx.system.api.IFileUploadApi" interface="com.yougou.wfx.system.api.IFileUploadApi" timeout="10000" check="false" version="1.0" protocol="hessian" />
+	
+	<!-- 分销包api -->
+	<dubbo:reference id="bagBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.IBagBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 基础分类后台api -->
+	<dubbo:reference id="commodityCatb2cBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityCatb2cBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 基础分类前台api -->
+	<dubbo:reference id="commodityCatb2cFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.front.ICommodityCatb2cFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 销售分类后台Api -->
+	<dubbo:reference id="commoditySaleCatBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.cms.api.background.ICommoditySaleCatBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 销售分类前台Api -->
+	<dubbo:reference id="commoditySaleCatFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.cms.api.front.ICommoditySaleCatFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 销售分类与基础分类关系Api -->
+	<dubbo:reference id="commoditySaleCatRelaBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.cms.api.background.ICommoditySaleCatRelaBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 订单前台Api -->
+	<dubbo:reference id="orderBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.order.api.background.IOrderBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- f订单后台Api -->
+	<dubbo:reference id="orderFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.order.api.front.IOrderFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 子订单Api -->
+	<dubbo:reference id="orderDetailBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.order.api.background.IOrderDetailBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 品牌 backgroundApi -->
+	<dubbo:reference id="commodityBrandBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityBrandBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 品牌 frontApi -->
+	<dubbo:reference id="commodityBrandFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.front.ICommodityBrandFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />	
+
+	<!-- 普通会员列表backgroundApi -->
+	<dubbo:reference id="memberProfileBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.member.api.background.IMemberProfileBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 会员操作日志backgroundApi -->
+	<dubbo:reference id="memberActionLogBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.member.api.background.IMemberActionLogBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	
+	<!-- 供货商Api -->
+	<dubbo:reference id="supplierBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.user.api.background.ISupplierBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- MemberAccountapi -->
+	<!-- backgroundApi -->
+	<dubbo:reference id="memberAccountBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.member.api.background.IMemberAccountBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- frontApi -->
+	<dubbo:reference id="memberAccountFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.member.api.front.IMemberAccountFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 分销商后台Api -->
+	<dubbo:reference id="sellerInfoBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.seller.api.background.ISellerInfoBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<dubbo:reference id="sellerBankBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.seller.api.background.ISellerBankBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<dubbo:reference id="sellerAuthorizeBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.seller.api.background.ISellerAuthorizeBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 系统配置Api -->
+	<dubbo:reference id="sysConfigBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.basicset.api.background.ISysConfigBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+    <!-- 财务微分销账户信息接口 -->
+	<dubbo:reference id="finSellerInfoBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinSellerInfoBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 分销商账户明细信息服务管理 -->
+    <dubbo:reference id="finSellerInfoDetailBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinSellerInfoDetailBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+    <!-- 分销商账户提现申请管理 -->
+    <dubbo:reference id="finSellerAccountWithdrawBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinSellerAccountWithdrawBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+     
+	<!-- 财务管理 -->
+	<!-- 佣金比例设置 -->
+	<dubbo:reference id="commissionPercentBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.ICommissionPercentBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<dubbo:reference id="commissionDetailBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.ICommissionDetailBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 财务收款信息后台Api -->
+	<dubbo:reference id="finAlreadyIncomeBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinAlreadyIncomeBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 财务退款信息后台Api -->
+	<dubbo:reference id="finReturnDebtBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinReturnDebtBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 财务退款提供给外部调用 -->
+	<dubbo:reference id="finRefundBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinRefundBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 财务退款日志后台Api -->
+	<dubbo:reference id="finReturnDebtLogBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.finance.api.background.IFinReturnDebtLogBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 商品表Api -->
+	<dubbo:reference id="commodityStyleBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityStyleBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 货品Api -->
+	<dubbo:reference id="commodityProductBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityProductBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+
+	<!-- 模块操作日志-->
+	<!-- backgroundApi -->
+	<dubbo:reference id="sysLogBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ISysLogBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 售后列表api -->
+	<!-- backgroundApi -->
+	<dubbo:reference id="orderRefundBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.aftersale.api.background.IOrderRefundBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 文章 -->
+	<dubbo:reference id="discoverArticleBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.discover.api.background.IDiscoverArticleBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 发现模块轮播图 -->
+	<dubbo:reference id="discoverCarouselFigureBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.discover.api.background.IDiscoverCarouselFigureBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 订单备注 -->
+	<!-- backgroundApi -->
+	<dubbo:reference id="orderRemarkBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.order.api.background.IOrderRemarkBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 店铺api -->
+	<dubbo:reference id="shopBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.shop.api.background.IShopBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 品牌分类关系api -->
+	<dubbo:reference id="commodityBrandCatb2cBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityBrandCatb2cBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+
+	<!-- 轮播图Api -->
+	<dubbo:reference id="carouselFigureBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.cms.api.background.ICarouselFigureBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 订单/售后日志 -->
+	<dubbo:reference id="orderLogBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.order.api.background.IOrderLogBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 售后API -->
+	<dubbo:reference id="iAfterSaleFrontApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.aftersale.api.front.IAfterSaleFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+
+	<!-- SystemmgAreaapi -->
+	<dubbo:reference id="systemmgAreaBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.basicset.api.background.ISystemmgAreaBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	
+	<!-- 供应商地址 -->
+	<dubbo:reference id="supplierAddressBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.aftersale.api.background.ISupplierAddressBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+    <!-- app版本-->
+    <dubbo:reference id="appVersionBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.basicset.api.background.IAppVersionBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+ 	<!-- <dubbo:reference id="versionManageFrontApi" url="dubbo://127.0.0.1:22880"  interface="com.yougou.wfx.basicset.api.front.IVersionManageFrontApi" timeout="10000" check="false" version="1.0" protocol="dubbo" /> -->
+	<!-- 频道Api -->
+	<dubbo:reference id="discoverChannelBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.discover.api.background.IDiscoverChannelBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<dubbo:reference id="discoverLogBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.discover.api.background.IDiscoverLogBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 公告接口 -->
+	<dubbo:reference id="noticeBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.notice.api.background.INoticeBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+	<!-- 皮质接口 -->
+	<dubbo:reference id="commodityCortexBackgroundApi" url="dubbo://127.0.0.1:22880" interface="com.yougou.wfx.commodity.api.background.ICommodityCortexBackgroundApi" timeout="10000" check="false" version="1.0" protocol="dubbo" />
+</beans>

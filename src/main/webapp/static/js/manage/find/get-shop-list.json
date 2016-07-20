@@ -1,0 +1,305 @@
+{
+  "items": [
+    {
+      "contact": "峰帅",
+      "createTime": 1464939653000,
+      "id": "06db140243ea4fdcac33b5eaf2501e36",
+      "loginName": "13424369890",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "1030",
+      "sellerId": "9b21fcc66f7040589a374a5002772f6e",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-06-03 15:40:53",
+      "stringUpdateTime": "2016-06-03 15:40:53",
+      "updateTime": 1464939653000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "李珺",
+      "createTime": 1464938368000,
+      "id": "898eae157a0e4fef82dea0c23d0b3b6b",
+      "loginName": "13480705865",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "1029",
+      "sellerId": "e96c624b0b684497b12fd2ee0c86576f",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-06-03 15:19:28",
+      "stringUpdateTime": "2016-06-03 15:19:29",
+      "updateTime": 1464938369000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "dads",
+      "createTime": 1464426645000,
+      "id": "ebb21a96bf794207aa5f04bcaf7990a4",
+      "loginName": "18310907428",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "ads",
+      "sellerId": "628bd5866a55444f898c4806eba2967c",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-28 17:10:45",
+      "stringUpdateTime": "2016-06-03 02:39:47",
+      "updateTime": 1464892787000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "f d d789hhh",
+      "createTime": 1462780398000,
+      "id": "b26e6d86397540a8a7f55a6675723825",
+      "loginName": "13331014119",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "mobile": "13331014119",
+      "name": "belle北京分店",
+      "notice": "123ghhd d d听咯空突突",
+      "sellerId": "538b4c7472bd4895a2d804d5d0ec6fff",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-09 15:53:18",
+      "stringUpdateTime": "2016-06-01 11:05:17",
+      "updateTime": 1464750317000,
+      "updateUser": "admin",
+      "verifySeries": 0
+    },
+    {
+      "contact": "优购",
+      "createTime": 1464710400000,
+      "id": "yougoushop",
+      "loginName": "13888888888",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "mobile": "13888888888",
+      "name": "优购总店",
+      "notice": "优购微零售平台是百丽集团旗下优购科技有限公司（yougou.com）的分享购物ddd时尚生活。优购微零售平台主要销售优质，时尚的服饰鞋类一线品牌，包括百丽，思加图，他她，天美意，耐克，阿迪达斯，哥伦比亚，CAT等一线国际品牌鞋服及儿童产品。第一次购物成功后，即可申请成为分销商（即优粉），将商品分享给身边的人从而",
+      "sellerId": "0735d892126211e6a3c761269a921097",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-06-01 00:00:00",
+      "stringUpdateTime": "2016-05-31 14:28:45",
+      "updateTime": 1464676125000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "刚刚",
+      "createTime": 1464576956000,
+      "id": "f9135099206e4e7194447db552ce028d",
+      "loginName": "18519137870",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "刚刚店铺",
+      "sellerId": "4cbf8d32a7f64a3cbb5f66feee8a1d10",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-30 10:55:56",
+      "stringUpdateTime": "2016-05-30 10:57:59",
+      "updateTime": 1464577079000,
+      "updateUser": "yougou",
+      "verifySeries": 0
+    },
+    {
+      "contact": "吴",
+      "createTime": 1464161292000,
+      "id": "0692369e5d3241139ce669c474d43eaa",
+      "loginName": "18520123765",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "有间店铺",
+      "sellerId": "8414132033884c149caf6359d2563c14",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-25 15:28:12",
+      "stringUpdateTime": "2016-05-27 17:12:51",
+      "updateTime": 1464340371000,
+      "updateUser": "admin",
+      "verifySeries": 0
+    },
+    {
+      "contact": "琴沁",
+      "createTime": 1464072945000,
+      "id": "f354caacb3ca4291b99347525d8a1376",
+      "loginName": "15872842491",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "mobile": "15872842491",
+      "name": "cashflow",
+      "notice": "欢迎大家关注我的",
+      "sellerId": "db3182cf691f470a904291b8d3da6fde",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-24 14:55:45",
+      "stringUpdateTime": "2016-05-27 16:04:36",
+      "updateTime": 1464336276000,
+      "updateUser": "yougou",
+      "verifySeries": 0
+    },
+    {
+      "contact": "陈爱莲",
+      "createTime": 1464239921000,
+      "id": "7dbc6b9a36ef43c2ad186daf7d4e5b83",
+      "loginName": "18823792544",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "mobile": "18823792544",
+      "name": "陈陈的衣橱",
+      "notice": "买陈陈衣橱的衣服，还一个美美哒的你！",
+      "sellerId": "d28ff44ecc114a3181842479f4702d3c",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-26 13:18:41",
+      "stringUpdateTime": "2016-05-27 11:55:20",
+      "updateTime": 1464321320000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "侯奇男",
+      "createTime": 1464319780000,
+      "id": "975b12b44cf14a1c835e8c8615925b67",
+      "loginName": "15650715963",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "奇男分销商店铺测试",
+      "sellerId": "cc4625a65d8a4b6493d69cc485fdcc96",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-27 11:29:40",
+      "stringUpdateTime": "2016-05-27 11:29:59",
+      "updateTime": 1464319799000,
+      "updateUser": "yougou",
+      "verifySeries": 0
+    },
+    {
+      "contact": "王泽",
+      "createTime": 1464255917000,
+      "id": "cb060f0712084477ba1195b4526bc31e",
+      "loginName": "15801453416",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "周楠的下级经销商王泽",
+      "sellerId": "89e7b4c962a84897a282e1a8b6f508fd",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-26 17:45:17",
+      "stringUpdateTime": "2016-05-26 17:45:17",
+      "updateTime": 1464255917000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "郑子乔",
+      "createTime": 1464251604000,
+      "id": "7093bf67f28c4f7ca86f6a7eea520519",
+      "loginName": "13720125351",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "百丽总店",
+      "sellerId": "b971b5f346ac4eeb9f3c1916bdeacb30",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-26 16:33:24",
+      "stringUpdateTime": "2016-05-26 16:33:24",
+      "updateTime": 1464251604000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "周楠",
+      "createTime": 1464250128000,
+      "id": "ee6e36e6282942d28e59e884d0fcb969",
+      "loginName": "18610458366",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "周楠的店",
+      "sellerId": "2762a68d74524be685bd33452e95e3fc",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-26 16:08:48",
+      "stringUpdateTime": "2016-05-26 16:08:48",
+      "updateTime": 1464250128000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "fengjj",
+      "createTime": 1464245728000,
+      "id": "a666e895166f4557a4f8d704506d4414",
+      "loginName": "13620902790",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "name": "tessyss",
+      "sellerId": "96f61b601eb14d2ea7b225fbb48b3b31",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-26 14:55:28",
+      "stringUpdateTime": "2016-05-26 14:55:28",
+      "updateTime": 1464245728000,
+      "updateUser": "system",
+      "verifySeries": 0
+    },
+    {
+      "contact": "靳晓洁问",
+      "createTime": 1463538853000,
+      "id": "cd4985855733452b8d9a683e2745ba38",
+      "loginName": "18610291779",
+      "logoUrl": "SHOP_LOGO/default_logo.png",
+      "mobile": "13331014119",
+      "name": "北京的分销商的分销商",
+      "notice": "测试cessation斤斤计较",
+      "sellerId": "4cf1913784594ea89351b163e6539751",
+      "signUrl": "SHOP_SIGN/default_sign.png",
+      "status": 1,
+      "stringCreateTime": "2016-05-18 10:34:13",
+      "stringUpdateTime": "2016-05-26 13:52:35",
+      "updateTime": 1464241955000,
+      "updateUser": "yougou",
+      "verifySeries": 0
+    }
+  ],
+  "limit": 15,
+  "page": 1,
+  "pageCount": 2,
+  "result": [
+    {
+      "$ref": "$.items[0]"
+    },
+    {
+      "$ref": "$.items[1]"
+    },
+    {
+      "$ref": "$.items[2]"
+    },
+    {
+      "$ref": "$.items[3]"
+    },
+    {
+      "$ref": "$.items[4]"
+    },
+    {
+      "$ref": "$.items[5]"
+    },
+    {
+      "$ref": "$.items[6]"
+    },
+    {
+      "$ref": "$.items[7]"
+    },
+    {
+      "$ref": "$.items[8]"
+    },
+    {
+      "$ref": "$.items[9]"
+    },
+    {
+      "$ref": "$.items[10]"
+    },
+    {
+      "$ref": "$.items[11]"
+    },
+    {
+      "$ref": "$.items[12]"
+    },
+    {
+      "$ref": "$.items[13]"
+    },
+    {
+      "$ref": "$.items[14]"
+    }
+  ],
+  "totalCount": 26
+}

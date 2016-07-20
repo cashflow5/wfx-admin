@@ -1,0 +1,55 @@
+//@position 位置 (left, right), @width 固定框的宽度, @space 固定框与自动框之间的间距
+.g-layout-column-2(@position:left, @width: 100px, @space: 10px){
+  .margin-left-or-right(){
+    .echo-margin(@p) when (@p=left){
+      margin-right: -@width;
+    }
+    .echo-margin(@p) when (@p=right){
+      margin-left: -@width;
+    }
+    .echo-margin(@position);
+  }
+  > .g-layout-main {
+    width: 100%;
+    float: left;
+    > .g-layout-container {
+      margin-@{position}: @width + @space;
+    }
+  }
+
+  > .g-layout-@{position} {
+    .margin-left-or-right();
+    width: @width;
+    float: @position;
+    position: relative;
+    .box-sizing(border-box);
+  }
+  .clearfix();
+}
+
+//@leftWidth 左边固定框的宽度, @rightWidth 右边固定框的宽度，@space 固定框与自动框之间的间距
+.g-layout-column-3(@leftWidth: 50px, @rightWidth: 50px, @spance: 10px){
+  > .g-layout-left {
+    width: @leftWidth;
+    margin-right: -@leftWidth;
+    float: left;
+    overflow: hidden;
+  }
+
+  .g-layout-main {
+    float: left;
+    width: 100%;
+    > .g-layout-container {
+      margin-left: @leftWidth + @spance;
+      margin-right: @rightWidth + @spance;
+    }
+  }
+
+  > .g-layout-right {
+    float: right;
+    width: @rightWidth;
+    margin-left: -@rightWidth;
+    overflow: hidden;
+  }
+  .clearfix();
+}

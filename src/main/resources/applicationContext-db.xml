@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/jee  http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
+	default-lazy-init="true">
+
+	<bean id="parentDataSource" class="com.alibaba.druid.pool.DruidDataSource" abstract="true" destroy-method="close">
+		<property name="maxActive" value="#{wfxProps['jdbc.pool.maxActive']}" />
+		<property name="maxIdle" value="#{wfxProps['jdbc.pool.maxIdle']}" />
+		<property name="minIdle" value="0" />
+		<property name="defaultAutoCommit" value="false" />
+	</bean>
+
+	<bean id="masterDataSource" parent="parentDataSource">
+		<property name="driverClassName" value="#{wfxProps['master.jdbc.driver']}" />
+		<property name="url" value="#{wfxProps['master.jdbc.url']}" />
+		<property name="username" value="#{wfxProps['master.jdbc.username']}" />
+		<property name="password" value="#{wfxProps['master.jdbc.password']}" />
+
+	</bean>
+
+	<!-- mybatis -->
+	<bean id="sqlSessionFactoryWfx" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="masterDataSource"></property>
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:com/yougou/wfx/*/sql/*Mapper.xml</value>
+			</list>
+		</property>
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.yougou.wfx.system.dao" />
+	</bean>
+
+	<!-- JDBC 据源事务管理 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="masterDataSource" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>

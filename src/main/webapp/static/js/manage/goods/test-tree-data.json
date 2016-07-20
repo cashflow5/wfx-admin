@@ -1,0 +1,67 @@
+/*
+ * isFlag: 0 不启用, 1启用
+ * */
+[
+    {
+        "id": 1,
+        "pId": null,
+        "name": "全部",
+        "t": "全部",
+        "rtype": "root",
+        "open": "true",
+        "click": false,
+        "iconSkin": "root",
+        "url": "",
+        "description": "这是根目录",
+        "isFlag": 1
+    },
+    {
+        "id": 11,
+        "pId": 1,
+        "name": "2013年",
+        "t": "2013年",
+        "rtype": "menu",
+        "value": "y2013",
+        "isParent": true,
+        "iconSkin": "menu",
+        "url": "",
+        "description": "2013年菜单",
+        "isFlag": 1
+    },
+    {
+        "id": 12,
+        "pId": 1,
+        "name": "BS",
+        "t": "BS",
+        "rtype": "folder",
+        "value": "BS",
+        "iconSkin": "folder",
+        "url": "",
+        "description": "BS的目录",
+        "isFlag": 1
+    },
+    {
+        "id": 13,
+        "pId": 1,
+        "name": "CS",
+        "t": "CS",
+        "rtype": "menu",
+        "value": "CS",
+        "iconSkin": "menu",
+        "url": "",
+        "description": "CS菜单",
+        "isFlag": 1
+    },
+    {
+        "id": 14,
+        "pId": 1,
+        "name": "PDA",
+        "t": "PDA",
+        "rtype": "folder",
+        "value": "PDA",
+        "iconSkin": "folder",
+        "url": "",
+        "description": "PDA目录",
+        "isFlag": 0
+    }
+]

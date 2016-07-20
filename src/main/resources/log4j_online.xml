@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%t] [%c] - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="dailyRollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/data/applogs/wfx/wfx-admin.log" />
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH\:mm\:ss} %-5p [%t] [%c] - %m%n" />
+		</layout>
+	</appender>
+
+	<logger name="org">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="net">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="com.alisoft">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.springframework">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org.mybatis">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="org.apache.ibatis">
+		<level value="WARN" />
+	</logger>
+
+	<logger name="net.sf.ehcache">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="java.sql">
+		<level value="WARN" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="dailyRollingFile" />
+	</root>
+</log4j:configuration>

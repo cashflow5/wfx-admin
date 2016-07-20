@@ -1,0 +1,100 @@
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle"><i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">会员信息管理</span>
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../member-manage-modity.shtml" data-value="menu"> <i class="menu-icon fa fa-caret-right"></i>
+				会员身份修改
+			</a>
+		</li>
+	</ul>
+</li>
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle"><i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">商品管理 </span>
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../brand-manage.shtml" data-value="menu"> <i class="menu-icon fa fa-caret-right"></i>
+				品牌管理
+			</a>
+		</li>
+		<li class="">
+			<a href="../base-goods-manage.shtml?debugmode" data-value="menu"> <i class="menu-icon fa fa-caret-right"></i>
+				基础分类管理
+			</a>
+		</li>
+	</ul>
+</li>
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle"> 
+		<i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">CMS管理</span> 
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../sale-cms-manage.shtml" data-value="menu"> 
+				<i class="menu-icon fa fa-caret-right"></i>
+				销售分类
+			</a>
+		</li>
+	</ul>
+</li>
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle">
+		<i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">订单管理 </span> 
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../details-order-manage.shtml" data-value="menu">
+				<i class="menu-icon fa fa-caret-right"></i> 订单列表
+			</a>
+		</li>
+	</ul>
+</li>
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle"> 
+		<i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">退款/售后管理 </span> 
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../list-afterSale-manage.shtml" data-value="menu"> 
+				<i class="menu-icon fa fa-caret-right"></i>
+				退款/售后列表
+			</a>
+			<a href="list-afterSale-apply.shtml" data-value="menu">
+				<i class="menu-icon fa fa-caret-right"></i>
+				售后申请
+			</a>
+		</li>
+	</ul>
+</li>
+<li data-value="parentMenu" class="">
+	<a href="javascript:void(0);" class="dropdown-toggle"> 
+		<i class="menu-icon fa fa-navicon"></i>
+		<span class="menu-text">财务管理 </span> 
+		<b class="arrow fa fa-angle-down"></b>
+	</a> 
+	<b class="arrow"></b>
+	<ul class="submenu">
+		<li class="">
+			<a href="../only-refund-details.shtml" data-value="menu"> 
+				<i class="menu-icon fa fa-caret-right"></i>
+				仅退款详情
+			</a>
+		</li>
+	</ul>
+</li>

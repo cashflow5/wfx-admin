@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<!--#include file="/layouts/head.shtml"-->
+<!-- /Head -->
+<body class="no-skin">
+<script>
+    YouGou.UI.progressLoading();
+</script>
+<!-- Navbar -->
+<!--#include file="/layouts/navbar.shtml" -->
+<!-- /Navbar -->
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- Page Sidebar -->
+    <!--#include file="/layouts/sidebar.shtml" -->
+    <!-- /Page Sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="page-content pt0" id="page-content">
+                <!-- start 按钮功能区 -->
+                <div class="bg-gray area-btn">
+                    <a class="btn btn-xs mr5">导出</a>
+                    <a class="btn btn-xs mr5">导出</a>
+                    <a class="btn btn-xs mr5">导出</a>
+                    <a class="btn btn-xs mr5">导出</a>
+                    <a class="btn btn-xs">导出</a>
+                </div>
+                <!-- end 按钮功能区 -->
+                <!-- Page Body -->
+                <div class="row pt15" id="girdContent">
+                    <div class="col-xs-12">
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="active"><a data-toggle="tab" href="#memberList" aria-expanded="true">会员列表</a></li>
+                                <li class=""><a data-toggle="tab" href="#memberShipList" aria-expanded="false">会员身份变更日志 </a></li>
+                            </ul>
+                            <div class="tab-content">
+                            <!-- 会员列表 start -->
+                                <div id="memberList" class="tab-pane fade active in">
+                                    <form class="form-horizontal" id="searchForm">
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-1 control-label col-xs-12 no-padding-right">登录名：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="userName" value="" type="text">
+                                                        </div>
+                                                        <label for="levelId" class="col-sm-1 control-label col-xs-12 no-padding-right"> 会员等级：</label>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control input-sm" name="levelId">
+                                                                <option value="">所有</option>
+                                                                <option value="9c071c60f143405aa9d52d42459b5b49">测试</option>
+                                                                <option value="2c94811e30cf9f5a0130cfa6c7800001">普通会员</option>
+                                                                <option value="000000003fa4240b013fa4281f050004">普通会员</option>
+                                                                <option value="2c94813131db7f0a0131dba6f2c70541">SVIP会员</option>
+                                                                <option value="8a809ec83b8e066e013b8e0927330001">钻石会员</option>
+                                                                <option value="000000003f74d46c013f751c38d1007a">白金会员</option>
+                                                                <option value="000000003f74d46c013f752f84b40097">金牌会员</option>
+                                                            </select>
+                                                        </div>
+                                                        <label for="memberShip" class="col-sm-1 control-label col-xs-12 no-padding-right"> 会员身份：</label>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control input-sm" name="memberShip">
+                                                                <option value="">所有</option>
+                                                                <option value="B">新会员
+                                                                </option>
+                                                                <option value="G">会员
+                                                                </option>
+                                                                <option value="C">红名单
+                                                                </option>
+                                                                <option value="E">黄名单
+                                                                </option>
+                                                                <option value="F">黑名单
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <label for="numberId" class="col-sm-1 control-label col-xs-12 no-padding-right"> 会员来源：</label>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control input-sm" name="numberId">
+                                                                <option value="">所有</option>
+                                                                <option value="taoxiu">淘秀网
+                                                                </option>
+                                                                <option value="yougou">优购网
+                                                                </option>
+                                                                <option value="mobile">手机平台
+                                                                </option>
+                                                                <option value="TB">淘宝
+                                                                </option>
+                                                                <option value="WBPT">外部平台
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-sm-1 control-label col-xs-12 no-padding-right">姓名：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="realName" value="" type="text">
+                                                        </div>
+                                                        <label for="insideCode" class="col-sm-1 control-label col-xs-12 no-padding-right"> 手机号码：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="mobilePhone" value="" type="text">
+                                                        </div>
+                                                        <label for="operator" class="col-sm-1 control-label col-xs-12 no-padding-right"> 积分：</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" id="minIntegral" name="minIntegral" value="" class="input-medium">
+                                                            <label>到</label>
+                                                            <input type="text" id="maxIntegral" name="maxIntegral" value="" class="input-medium">
+                                                        </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                        <label for="receiveMobile" class="col-sm-1 control-label col-xs-12 no-padding-right">收货手机：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="receiveMobile" value="" type="text">
+                                                        </div>
+                                                        <label for="operator" class="col-sm-1 control-label col-xs-12 no-padding-right"> 注册时间：</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" name="registStartDate" id="registStartDate" readonly="readonly" value="" class="input-medium">
+                                                            <label>至</label>
+                                                            <input type="text" name="registEndDate" id="registEndDate" readonly="readonly" value="" class="input-medium">
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="button" value="搜索" class="btn btn-yougou" onclick="doQuery();"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <table id="grid-table" class="mmg"></table>
+                                    <div id="grid-pager" style="text-align:right;" class=""></div>
+                                </div>
+                                <!-- 会员列表 end -->
+                                <!-- 会员身份变更日志 start -->
+                                <div id="memberShipList" class="tab-pane fade">
+                                    <form class="form-horizontal" id="searchForm2">
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="form-group">
+                                                        <label for="operator" class="col-sm-1 control-label col-xs-12 no-padding-right">订单号：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="orderNo" value="" type="text">
+                                                        </div>
+                                                        <label for="operator" class="col-sm-1 control-label col-xs-12 no-padding-right">会员账号：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="loginName" value="" type="text">
+                                                            <input type="hidden" name="loginaccountId" value=""/>
+                                                        </div>
+                                                        <label for="operator" class="col-sm-1 control-label col-xs-12 no-padding-right"> 变更时间：</label>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" name="minTime" id="minTime" readonly="readonly" value="" class="input-medium">
+                                                            <label>至</label>
+                                                            <input type="text" name="maxTime" id="maxTime" readonly="readonly" value="" class="input-medium">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="memberShip" class="col-sm-1 control-label col-xs-12 no-padding-right">修改原因：</label>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control input-sm" name="reasonShip">
+                                                                <option value="">全部</option>
+                                                                <option value="代销商">代销商</option>
+                                                                <option value="不良会员">不良会员</option>
+                                                                <option value="盗取账号、优惠劵">盗取账号、优惠劵</option>
+                                                                <option value="倒卖账号">倒卖账号</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="col-sm-1 control-label col-xs-12 no-padding-right">操作人：</label>
+                                                        <div class="col-sm-2">
+                                                            <input class="form-control input-sm" name="username" value="" type="text">
+                                                        </div>
+                                                            <label for="memberShip" class="col-sm-1 control-label col-xs-12 no-padding-right"> 更新状态：</label>
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control input-sm" name="nowShip">
+                                                                <option value="">全部</option>
+                                                                <option value="白名单">白名单</option>
+                                                                <option value="新会员">新会员</option>
+                                                                <option value="会员">会员</option>
+                                                                <option value="红名单">红名单</option>
+                                                                <option value="灰名单">灰名单</option>
+                                                                <option value="黄名单">黄名单</option>
+                                                                <option value="黑名单">黑名单</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <input type="button" value="搜索" class="btn btn-yougou" onclick="doQuery2();"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                    <table id="grid-table2" class="mmg"></table>
+                                    <div id="grid-pager2" style="text-align:right;" class=""></div>
+                                    </div>
+                                    <!-- 会员身份变更日志 end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form id="memberShipForm" class="hide form-horizontal message-form col-xs-12">
+                                <input type="hidden" name="nowShip" id="nowShip" value="F" />
+                                <input type="hidden" name="loginaccountId" id="accountId"/>
+                                <input type="hidden" name="originalShip" id="originalShip"/>
+                                <div id="memberShipNavbar" class="hide message-navbar clearfix">
+                                    <div class="message-bar">
+                                        <div class="message-toolbar">
+                                            <button type="button" class="btn btn-xs btn-white btn-yougou" onclick="saveMemberShip();">
+                                                <i class="ace-icon fa fa-floppy-o bigger-175"></i>
+                                                <span class="bigger-110">保存</span>
+                                            </button>
+                                            <button type="button" class="btn btn-xs btn-white btn-yougou" onclick="hideForm();">
+                                                <i class="ace-icon fa fa-times bigger-175 orange2"></i>
+                                                <span class="bigger-110">取消</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="messagebar-item-left">
+                                            <a href="javascript:void(0);" class="btn-back-message-list" onclick="hideForm();">
+                                                <i class="ace-icon fa fa-arrow-left bigger-110 middle blue"></i>
+                                                <b class="middle bigger-110">返回列表</b>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-recipient"><font color="red">*</font>当前会员身份状态：</label>
+                                        <div class="col-sm-9" id="memberShip"></div>
+                                    </div>
+                                    <div class="hr hr-10 dotted"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-subject"><font color="red">*</font>更新会员身份：</label>
+                                        <div class="col-sm-6 col-xs-12">
+                                            <div class="block col-xs-12 no-padding">
+                                                <input type="radio" name="currentShip" value="F" onclick="setShipValue('F')"/>黑名单&nbsp;
+                                                <input type="radio" name="currentShip" value="C" onclick="setShipValue('C')"/>红名单&nbsp;
+                                                <input type="radio" name="currentShip" value="E" onclick="setShipValue('E')"/>黄名单&nbsp;
+                                                <input type="radio" name="currentShip" value="G" onclick="setShipValue('G')"/>会员&nbsp;
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hr hr-10 dotted"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-recipient"><font color="red">*</font>变更原因：</label>
+                                        <div class="col-sm-9">
+                                            <select name="reasonShip" style="width:100px;margin-left:8px;" id="reasonShip">
+                                                <option value="">请选择</option>
+                                                <option value="代销商">代销商</option>
+                                                <option value="不良会员">不良会员</option>
+                                                <option value="盗取账号、优惠劵">盗取账号、优惠劵</option>
+                                                <option value="倒卖账号">倒卖账号</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="hr hr-10 dotted"></div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-recipient">备注：</label>
+                                        <div class="col-sm-3">
+                                            <textarea id="reasonModify" name="reasonModify" maxlength="100" class="autosize-transition form-control" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 65px;"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /.page-content -->
+        </div>
+    </div>
+    <!-- /.main-content -->
+    <!-- Footer Container -->
+    <!--#include file="/layouts/footer.shtml" -->
+    <!--  /Footer Container -->
+    <a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm">回到顶部
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>
+<!-- /.main-container -->
+<script type="text/javascript" src="static/js/user/queryMemberShip.js"></script>
+<script type="text/javascript" src="static/js/user/updateMemberShip.js"></script>
+</body>
+</html>
